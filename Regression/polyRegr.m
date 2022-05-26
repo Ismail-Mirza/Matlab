@@ -2,8 +2,9 @@ function c = polyRegr(x,y)
 %POLYREGR Summary of this function goes here
 %   Detailed explanation goes here
 n = length(x);
-if n <= length(y)
+if n < length(y)
     disp("System is not solvable");
+    return;
 end
 sum_x = sum(x);
 sum_xx = sum(x.^2);
